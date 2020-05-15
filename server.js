@@ -6,13 +6,13 @@ app.use(express.static(__dirname+'/public'))
 
 const port=process.env.PORT || 3000;
 
-app.get('/',(req,res)=>{
+app.get('/public/help.html',(req,res)=>{
     res.send({
         name : 'debarghya',
         like: 'photography'
     });
 });
 
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log('server is running!');
 })
